@@ -674,11 +674,7 @@ AC_CHECK_HEADERS([sys/types.h sys/un.h arpa/inet.h dirent.h grp.h fcntl.h inttyp
 
 save_cxxflags="${CXXFLAGS}"
 save_cppflags="${CPPFLAGS}"
-CXXFLAGS="${CXXFLAGS} -msse3"
-CPPFLAGS="${CPPFLAGS} -msse3"
 AC_CHECK_HEADERS([intrin.h x86intrin.h pmmintrin.h xmmintrin.h emmintrin.h])
-CXXFLAGS="${save_cxxflags} -mavx"
-CPPFLAGS="${save_cppflags} -mavx"
 AC_CHECK_HEADERS([immintrin.h avxintrin.h])
 
 AC_CHECK_DECLS([_xgetbv, xgetbv, __xgetbv, cpuid, _cpuid, __cpuid],
